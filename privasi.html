@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kebijakan Privasi — Zayamiyu</title>
+<meta name="description" content="Kebijakan privasi Zayamiyu dan aplikasi Belajar Berhitung.">
+<link rel="icon" href="./img/ikon-berhitung.png">
+<style>
+@font-face { font-family: 'Baloo 2'; src: url('./fonts/baloo2.woff2') format('woff2'); font-weight: 400 800; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('./fonts/nunito.woff2') format('woff2'); font-weight: 400 900; font-display: swap; }
+body { margin: 0; font-family: 'Nunito', -apple-system, 'Segoe UI', Roboto, sans-serif; color: #1F2A44; background: #FFFBF0; line-height: 1.65; font-size: 17px; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 32px 22px 64px; }
+h1, h2 { font-family: 'Baloo 2', ui-rounded, sans-serif; line-height: 1.2; }
+h1 { font-size: 38px; margin: 18px 0 6px; }
+h2 { font-size: 24px; margin: 32px 0 8px; }
+a { color: #136E9C; }
+.muted { color: #5E6C8A; }
+.kotak { background: #fff; border: 2px solid #1F2A44; border-radius: 18px; padding: 16px 20px; margin: 16px 0; }
+ul { padding-left: 22px; }
+li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p><a href="./">← Zayamiyu</a></p>
+  <h1>Kebijakan Privasi</h1>
+  <p class="muted">Berlaku untuk website zayamiyu.com dan aplikasi Belajar Berhitung. Diperbarui 11 Oktober 2026.</p>
+
+  <div class="kotak">
+    <b>Ringkasnya:</b> progres belajar anak tersimpan di perangkat anak sendiri. Kami tidak memakai akun, iklan, atau pelacak. Satu-satunya data yang pernah dikirim ke luar perangkat adalah ringkasan angka untuk laporan mingguan, dan itu hanya terjadi kalau orang tua menyalakannya.
+  </div>
+
+  <h2>1. Data yang tersimpan di perangkat</h2>
+  <p>Aplikasi Belajar Berhitung menyimpan data berikut di penyimpanan browser (localStorage) pada perangkat yang dipakai anak:</p>
+  <ul>
+    <li>nama panggilan dan gambar profil yang dipilih (emoji);</li>
+    <li>riwayat latihan: soal yang dijawab, benar atau salah, waktu menjawab, bintang, dan hari berlatih;</li>
+    <li>pengaturan, misalnya suara, batas soal, dan PIN orang tua.</li>
+  </ul>
+  <p>Data ini tidak dikirim ke server kami. Kami tidak bisa melihatnya. Data ikut terhapus kalau data situs di browser dihapus. Orang tua bisa memindahkannya sendiri ke perangkat lain lewat kode cadangan di menu Orang tua.</p>
+
+  <h2>2. Laporan mingguan dari Claude (pilihan orang tua)</h2>
+  <p>Laporan ini <b>mati secara bawaan</b>. Orang tua bisa menyalakannya di menu Orang tua setelah membaca daftar data yang dikirim. Setiap kali orang tua menekan <i>Buat laporan</i>, aplikasi mengirim ringkasan tujuh hari terakhir ke server kami, lalu server kami meneruskannya ke Claude, layanan AI milik Anthropic.</p>
+  <p><b>Yang dikirim:</b> jumlah hari, sesi, dan menit latihan; judul pelajaran yang dilatih, jumlah jawaban benar, bintang, dan rata-rata detik per soal; soal yang sering salah (misalnya "8 + 7"); dan apakah batas waktu dilonggarkan.</p>
+  <p><b>Yang tidak pernah dikirim:</b> nama anak, gambar profil, PIN, penanda perangkat, atau teks apa pun yang diketik anak.</p>
+  <p>Server kami membuang data apa pun di luar daftar di atas, dan tidak menyimpan ringkasan maupun laporannya. Laporan yang sudah jadi disimpan hanya di perangkat orang tua. Pengolahan oleh Anthropic tunduk pada ketentuan komersial dan kebijakan privasi Anthropic.</p>
+  <p>Orang tua bisa mematikan laporan kapan saja. Persetujuan ini tidak ikut terbawa saat data dipindahkan ke perangkat lain.</p>
+
+  <h2>3. Anak dan AI</h2>
+  <p>Anak tidak pernah mengetik teks bebas ke AI, dan tidak pernah membaca teks buatan AI. Laporan Claude ditujukan untuk orang tua. Jawaban Claude diperiksa di server sebelum ditampilkan, termasuk larangan memberi label atau diagnosis apa pun tentang anak.</p>
+
+  <h2>4. Website ini</h2>
+  <p>Website zayamiyu.com tidak memakai cookie, analitik, atau pelacak. Pilihan bahasa disimpan di browser Anda sendiri. Seperti semua website, penyedia hosting kami (Vercel) mencatat informasi teknis standar untuk keamanan, misalnya alamat IP dan waktu akses.</p>
+
+  <h2>5. Hak Anda</h2>
+  <p>Karena data latihan tersimpan di perangkat Anda, Anda memegang kendali penuh: menghapus data situs di browser, atau menekan <i>Hapus profil</i> di menu Orang tua → Atur, akan menghapusnya. Untuk pertanyaan tentang privasi, hubungi kami.</p>
+
+  <h2>6. Kontak</h2>
+  <p><a href="mailto:papa@zayamiyu.com">papa@zayamiyu.com</a></p>
+</div>
+</body>
+</html>

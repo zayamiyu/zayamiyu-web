@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="id" data-bahasa="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zayamiyu — Belajar yang hangat untuk anak SD</title>
+<meta name="description" content="Zayamiyu membuat aplikasi belajar untuk anak SD dan orang tuanya. Produk pertama: Belajar Berhitung, latihan berhitung dengan strategi, bukan jari.">
+<meta name="theme-color" content="#8FD9FF">
+<link rel="icon" href="./img/ikon-berhitung.png">
+<meta property="og:title" content="Zayamiyu — Belajar yang hangat untuk anak SD">
+<meta property="og:description" content="Produk pertama: Belajar Berhitung. Latihan berhitung dengan strategi, aman untuk anak, tanpa iklan.">
+<meta property="og:image" content="./img/bab-buaya.webp">
+<style>
+@font-face { font-family: 'Baloo 2'; src: url('./fonts/baloo2.woff2') format('woff2'); font-weight: 400 800; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('./fonts/nunito.woff2') format('woff2'); font-weight: 400 900; font-display: swap; }
+:root {
+  --ink: #1F2A44; --muted: #5E6C8A; --sky: #8FD9FF; --sky-soft: #E3F5FE; --yellow: #FFD23F; --yellow-soft: #FFF6CC;
+  --green: #35C96A; --green-text: #177A3C; --orange-soft: #FFEFD9; --purple-soft: #EEE8FF; --paper: #FFFBF0; --line: #E9EEF5;
+  --head: 'Baloo 2', ui-rounded, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --body: 'Nunito', -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --panel: 0 3px 0 rgba(31,42,68,.13), 0 10px 24px rgba(31,42,68,.10);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--body); color: var(--ink); background: var(--paper); line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; display: block; }
+a { color: #136E9C; }
+h1, h2, h3 { font-family: var(--head); line-height: 1.15; margin: 0 0 12px; }
+h1 { font-size: clamp(36px, 7vw, 60px); font-weight: 800; }
+h2 { font-size: clamp(28px, 4.6vw, 40px); font-weight: 800; }
+h3 { font-size: 21px; font-weight: 800; }
+p { margin: 0 0 14px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+section { padding: 72px 0; }
+.eyebrow { font-family: var(--head); font-weight: 800; font-size: 14px; letter-spacing: .8px; text-transform: uppercase; color: var(--green-text); margin-bottom: 8px; }
+.lead { font-size: 19px; color: var(--muted); max-width: 640px; }
+
+/* Bahasa: elemen berbahasa lain disembunyikan */
+html[data-bahasa="id"] [lang="en"], html[data-bahasa="en"] [lang="id"] { display: none !important; }
+
+/* kepala */
+.nav { position: sticky; top: 0; z-index: 10; background: rgba(255,251,240,.92); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+.nav .wrap { display: flex; align-items: center; gap: 18px; height: 64px; }
+.merek { font-family: var(--head); font-weight: 800; font-size: 26px; color: var(--ink); text-decoration: none; letter-spacing: .3px; }
+.merek span { color: #E0761C; }
+.nav .menu { display: flex; gap: 18px; margin-left: auto; }
+.nav .menu a { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 15px; }
+.bahasa { border: 2px solid var(--ink); background: #fff; border-radius: 999px; padding: 4px 12px; font-family: var(--head); font-weight: 800; font-size: 14px; cursor: pointer; color: var(--ink); }
+@media (max-width: 720px) { .nav .menu { display: none; } .bahasa { margin-left: auto; } }
+
+/* pembuka */
+.hero { background: linear-gradient(180deg, var(--sky) 0%, #CDEFFF 70%, var(--paper) 100%); padding: 56px 0 72px; }
+.hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; align-items: center; }
+.hero .lead { color: #2C3A5A; }
+.tombol { display: inline-flex; align-items: center; gap: 8px; font-family: var(--head); font-weight: 800; font-size: 18px; text-decoration: none; color: var(--ink); background: var(--yellow); border: 2.5px solid var(--ink); border-radius: 18px; padding: 12px 22px; box-shadow: 0 2px 0 var(--ink), 0 6px 14px rgba(31,42,68,.14); }
+.tombol.putih { background: #fff; }
+.tombol-baris { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.hero-gambar { justify-self: center; max-width: 320px; filter: drop-shadow(0 10px 18px rgba(31,42,68,.18)); }
+@media (max-width: 760px) { .hero .wrap { grid-template-columns: 1fr; } .hero-gambar { max-width: 220px; grid-row: 1; } }
+
+/* kartu */
+.kartu { background: #fff; border: 2.5px solid var(--ink); border-radius: 26px; padding: 24px; box-shadow: var(--panel); }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+@media (max-width: 820px) { .grid3 { grid-template-columns: 1fr; } }
+@media (max-width: 680px) { .grid2 { grid-template-columns: 1fr; } }
+
+/* produk */
+.produk-kepala { display: flex; gap: 18px; align-items: center; margin-bottom: 18px; }
+.produk-kepala img { width: 72px; height: 72px; border-radius: 18px; border: 2.5px solid var(--ink); }
+.ciri { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 10px; }
+.ciri li { padding-left: 32px; position: relative; }
+.ciri li::before { content: ''; position: absolute; left: 0; top: 5px; width: 20px; height: 20px; border-radius: 50%; background: var(--green); border: 2px solid var(--ink); }
+.layar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 32px; }
+.layar figure { margin: 0; }
+.layar img { border-radius: 28px; border: 3px solid var(--ink); box-shadow: var(--panel); }
+.layar figcaption { font-size: 15px; color: var(--muted); text-align: center; margin-top: 10px; font-weight: 700; }
+@media (max-width: 760px) { .layar { grid-template-columns: repeat(3, 72%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; } .layar figure { scroll-snap-align: start; } }
+
+/* claude */
+.claude { background: var(--purple-soft); }
+.alur { counter-reset: langkah; list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; }
+.alur li { counter-increment: langkah; background: #fff; border: 2px solid var(--ink); border-radius: 18px; padding: 14px 18px 14px 64px; position: relative; }
+.alur li::before { content: counter(langkah); position: absolute; left: 16px; top: 13px; width: 34px; height: 34px; border-radius: 50%; background: var(--yellow); border: 2px solid var(--ink); font-family: var(--head); font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.label { display: inline-block; font-family: var(--head); font-weight: 800; font-size: 13px; letter-spacing: .4px; border-radius: 999px; padding: 2px 10px; border: 2px solid var(--ink); margin-bottom: 10px; }
+.label.tayang { background: #C8F2D6; }
+.label.dikembangkan { background: var(--orange-soft); }
+
+/* aman */
+.aman .kartu h3 { display: flex; gap: 10px; align-items: center; }
+.aman .kartu h3 span { font-size: 26px; }
+
+/* tentang & kontak */
+.tentang { background: var(--sky-soft); }
+.kontak a.surel { font-family: var(--head); font-weight: 800; font-size: 22px; }
+footer { padding: 32px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Navigasi">
+  <div class="wrap">
+    <a class="merek" href="#">Zaya<span>miyu</span></a>
+    <div class="menu">
+      <a href="#produk"><span lang="id">Produk</span><span lang="en">Product</span></a>
+      <a href="#claude"><span lang="id">Claude di produk kami</span><span lang="en">How we use Claude</span></a>
+      <a href="#aman"><span lang="id">Keamanan anak</span><span lang="en">Child safety</span></a>
+      <a href="#kontak"><span lang="id">Kontak</span><span lang="en">Contact</span></a>
+    </div>
+    <button class="bahasa" id="bahasa" type="button" aria-label="Ganti bahasa / Switch language"><span lang="id">English</span><span lang="en">Indonesia</span></button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow"><span lang="id">Edtech untuk anak SD</span><span lang="en">Edtech for primary school children</span></div>
+      <h1><span lang="id">Belajar yang hangat, aman, dan masuk akal untuk anak SD.</span><span lang="en">Warm, safe, sensible learning for primary school children.</span></h1>
+      <p class="lead" lang="id">Zayamiyu membuat aplikasi belajar untuk anak SD dan orang tuanya. Sederhana dipakai, tanpa iklan, dan dirancang supaya anak benar-benar paham, bukan sekadar hafal.</p>
+      <p class="lead" lang="en">Zayamiyu builds learning apps for Indonesian primary school children and their parents. Simple to use, ad-free, and designed so children truly understand rather than merely memorise.</p>
+      <div class="tombol-baris">
+        <a class="tombol" href="https://belajar-berhitung-ten.vercel.app"><span lang="id">Coba Belajar Berhitung</span><span lang="en">Try Belajar Berhitung</span></a>
+        <a class="tombol putih" href="#claude"><span lang="id">Cara kami memakai Claude</span><span lang="en">How we use Claude</span></a>
+      </div>
+    </div>
+    <img class="hero-gambar" src="./img/kancil.webp" alt="Kancil, tokoh pemandu di aplikasi Belajar Berhitung" width="320" height="320">
+  </div>
+</header>
+
+<main>
+<section id="produk">
+  <div class="wrap">
+    <div class="eyebrow"><span lang="id">Produk pertama</span><span lang="en">Our first product</span></div>
+    <div class="produk-kepala">
+      <img src="./img/ikon-berhitung.png" alt="" width="72" height="72">
+      <div>
+        <h2 style="margin:0">Belajar Berhitung</h2>
+        <p style="margin:0;color:var(--muted)"><span lang="id">Untuk anak kelas 1 sampai 3 SD</span><span lang="en">For children in grades 1 to 3</span></p>
+      </div>
+    </div>
+    <p class="lead" lang="id">Banyak anak SD masih berhitung dengan jari, satu per satu. Belajar Berhitung mengajarkan cara berpikir yang dipakai anak yang lancar berhitung: pasangan sepuluh, penjumlahan kembar, membuat sepuluh, keluarga bilangan, puluhan dan satuan, sampai perkalian dan pembagian. Semuanya dalam 34 pelajaran pendek yang dibungkus cerita perjalanan Kancil.</p>
+    <p class="lead" lang="en">Many Indonesian primary school children still count on their fingers, one by one. Belajar Berhitung teaches the thinking strategies fluent children use instead: bonds to ten, doubles, making ten, fact families, tens and ones, all the way to multiplication and division. Everything is organised into 34 short lessons, wrapped in a folk-tale journey with Kancil the mouse-deer.</p>
+    <ul class="ciri">
+      <li lang="id"><b>Strategi, bukan hafalan.</b> Tiap pelajaran punya alat peraga: bingkai sepuluh, garis bilangan, dan susunan titik.</li>
+      <li lang="en"><b>Strategies, not rote memorisation.</b> Every lesson comes with a visual model: ten-frames, number lines and dot arrays.</li>
+      <li lang="id"><b>Bantu yang memberi cara, tidak pernah jawaban.</b> Seluruh soal dan petunjuknya diperiksa oleh lebih dari 35.000 pemeriksaan otomatis.</li>
+      <li lang="en"><b>Hints that give a method, never the answer.</b> All problems and hints are verified by more than 35,000 automated checks.</li>
+      <li lang="id"><b>Pengulangan berjarak.</b> Soal yang sering salah muncul lagi di hari lain sampai benar-benar melekat.</li>
+      <li lang="en"><b>Spaced repetition.</b> Facts a child gets wrong come back on later days until they stick.</li>
+      <li lang="id"><b>Tanpa akun, tanpa iklan, bisa dipakai tanpa internet.</b> Dipasang di iPhone, iPad, Android, dan komputer.</li>
+      <li lang="en"><b>No account, no ads, works offline.</b> Installs on iPhone, iPad, Android and desktop.</li>
+    </ul>
+    <div class="layar">
+      <figure><img src="./img/layar-beranda.webp" alt="Beranda Belajar Berhitung dengan misi hari ini" width="540" height="1169" loading="lazy"><figcaption><span lang="id">Misi hari ini</span><span lang="en">Today's mission</span></figcaption></figure>
+      <figure><img src="./img/layar-bantu.webp" alt="Soal 4 + 9 dengan petunjuk Bantu dan bingkai sepuluh" width="540" height="1169" loading="lazy"><figcaption><span lang="id">Bantu memberi cara</span><span lang="en">Hints show the method</span></figcaption></figure>
+      <figure><img src="./img/layar-peta.webp" alt="Peta perjalanan dengan sungai dan buaya" width="540" height="1169" loading="lazy"><figcaption><span lang="id">Peta perjalanan Kancil</span><span lang="en">Kancil's journey map</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="claude" class="claude">
+  <div class="wrap">
+    <div class="eyebrow"><span lang="id">Claude di produk kami</span><span lang="en">How we use Claude</span></div>
+    <h2><span lang="id">Claude bekerja untuk orang tua, tidak berbicara dengan anak.</span><span lang="en">Claude works for parents. It never talks to children.</span></h2>
+    <p class="lead" lang="id">Kami memakai Claude dari Anthropic di tempat yang paling berguna dan paling aman: membantu orang tua memahami perkembangan anaknya. Anak tidak pernah mengetik apa pun ke AI, dan tidak pernah membaca teks buatan AI yang belum diperiksa.</p>
+    <p class="lead" lang="en">We use Anthropic's Claude where it is most useful and safest: helping parents understand how their child is progressing. Children never type anything to an AI and never read unreviewed AI-generated text.</p>
+
+    <div class="grid2" style="margin-top:28px">
+      <div class="kartu">
+        <span class="label tayang"><span lang="id">Sudah tersedia</span><span lang="en">Live</span></span>
+        <h3><span lang="id">Laporan mingguan untuk orang tua</span><span lang="en">Weekly report for parents</span></h3>
+        <p lang="id">Claude membaca ringkasan latihan tujuh hari terakhir, lalu menulis perkembangan anak dalam bahasa sehari-hari: kemajuannya, yang perlu diperhatikan, dan kegiatan singkat di rumah yang sejalan dengan pelajaran yang sedang ditempuh.</p>
+        <p lang="en">Claude reads a summary of the past seven days of practice and writes up the child's progress in plain Indonesian: what improved, what needs attention, and short at-home activities that match the current lesson.</p>
+        <ol class="alur">
+          <li lang="id">Orang tua menyalakan laporan dari menu Orang tua, setelah membaca daftar data yang dikirim. Mati secara bawaan.</li>
+          <li lang="en">The parent switches the report on from the parent area, after reading exactly which data is sent. It is off by default.</li>
+          <li lang="id">Aplikasi menyusun ringkasan angka dan judul pelajaran, <b>tanpa nama anak</b>.</li>
+          <li lang="en">The app builds a summary of numbers and lesson titles, <b>without the child's name</b>.</li>
+          <li lang="id">Server kami membuang data di luar daftar, lalu meminta Claude menulis laporan dalam format JSON yang tetap.</li>
+          <li lang="en">Our server drops any field outside an allow-list, then asks Claude for the report in a fixed JSON schema.</li>
+          <li lang="id">Server memeriksa jawaban Claude: panjang, tanpa tautan, dan tanpa label diagnosis. Yang tidak lolos tidak ditampilkan.</li>
+          <li lang="en">The server validates Claude's answer: length, no links, and no diagnostic labels. Anything that fails is never shown.</li>
+        </ol>
+      </div>
+      <div>
+        <div class="kartu" style="margin-bottom:20px">
+          <span class="label dikembangkan"><span lang="id">Sedang dikembangkan</span><span lang="en">In development</span></span>
+          <h3><span lang="id">Petunjuk yang menyesuaikan kesalahan anak</span><span lang="en">Hints that adapt to the child's mistake</span></h3>
+          <p lang="id">Kode aplikasi mengenali jenis kesalahan, misalnya selisih satu atau tertukar tambah dan kurang. Claude membantu merangkai kalimat petunjuk yang sesuai. Petunjuk yang sudah teruji tetap menjadi cadangan.</p>
+          <p lang="en">The app recognises the type of mistake, such as off-by-one or a swapped operation, and Claude helps phrase a matching hint. Our tested hand-written hints remain the fallback.</p>
+        </div>
+        <div class="kartu">
+          <span class="label dikembangkan"><span lang="id">Sedang dikembangkan</span><span lang="en">In development</span></span>
+          <h3><span lang="id">Soal cerita dengan konteks Indonesia</span><span lang="en">Word problems in a local context</span></h3>
+          <p lang="id">Claude membantu menyusun soal cerita yang dekat dengan keseharian anak Indonesia. Setiap soal ditinjau guru SD dulu sebelum masuk ke aplikasi, jadi anak tidak pernah menerima teks AI mentah.</p>
+          <p lang="en">Claude helps draft word problems grounded in Indonesian children's everyday life. Every problem is reviewed by a primary school teacher before it enters the app, so children never receive raw AI text.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="aman" class="aman">
+  <div class="wrap">
+    <div class="eyebrow"><span lang="id">Keamanan anak</span><span lang="en">Child safety</span></div>
+    <h2><span lang="id">Prinsip yang tidak kami tawar.</span><span lang="en">Principles we do not compromise on.</span></h2>
+    <div class="grid3" style="margin-top:24px">
+      <div class="kartu"><h3><span aria-hidden="true">💬</span><span lang="id">Tanpa obrolan dengan AI</span><span lang="en">No chat with AI</span></h3>
+        <p lang="id">Anak tidak pernah mengetik teks bebas ke AI. Tidak ada fitur obrolan.</p><p lang="en">Children never type free text to an AI. There is no chat feature.</p></div>
+      <div class="kartu"><h3><span aria-hidden="true">📱</span><span lang="id">Data tetap di perangkat</span><span lang="en">Data stays on the device</span></h3>
+        <p lang="id">Progres belajar tersimpan di perangkat anak. Tidak ada akun, iklan, atau pelacak.</p><p lang="en">Learning progress is stored on the child's device. No accounts, no ads, no trackers.</p></div>
+      <div class="kartu"><h3><span aria-hidden="true">🔒</span><span lang="id">Orang tua yang memutuskan</span><span lang="en">Parents decide</span></h3>
+        <p lang="id">Fitur AI mati secara bawaan dan hanya menyala atas persetujuan orang tua.</p><p lang="en">AI features are off by default and only switched on with parental consent.</p></div>
+      <div class="kartu"><h3><span aria-hidden="true">🧾</span><span lang="id">Data minimal</span><span lang="en">Minimal data</span></h3>
+        <p lang="id">Yang dikirim ke Claude hanya angka dan judul pelajaran. Nama dan gambar profil tidak pernah dikirim.</p><p lang="en">Only numbers and lesson titles are sent to Claude. Names and profile pictures are never sent.</p></div>
+      <div class="kartu"><h3><span aria-hidden="true">✅</span><span lang="id">Jawaban AI diperiksa</span><span lang="en">AI output is checked</span></h3>
+        <p lang="id">Format tetap, batas panjang, dan larangan label diagnosis diperiksa di server sebelum apa pun ditampilkan.</p><p lang="en">Fixed schema, length limits and a ban on diagnostic labels are enforced on the server before anything is shown.</p></div>
+      <div class="kartu"><h3><span aria-hidden="true">🔑</span><span lang="id">Kunci hanya di server</span><span lang="en">Keys stay server-side</span></h3>
+        <p lang="id">Kunci API tersimpan di server, tidak pernah ada di aplikasi yang dipasang di perangkat.</p><p lang="en">API keys live on the server only, never inside the app on the device.</p></div>
+    </div>
+    <p style="margin-top:22px"><a href="./privasi.html"><span lang="id">Baca kebijakan privasi lengkap</span><span lang="en">Read the full privacy policy (Indonesian)</span></a></p>
+  </div>
+</section>
+
+<section id="tentang" class="tentang">
+  <div class="wrap grid2" style="align-items:center">
+    <div>
+      <div class="eyebrow"><span lang="id">Tentang Zayamiyu</span><span lang="en">About Zayamiyu</span></div>
+      <h2><span lang="id">Dimulai dari meja belajar di rumah.</span><span lang="en">It started at the study table at home.</span></h2>
+      <p lang="id">Zayamiyu didirikan oleh Muhammad, seorang ayah di Indonesia. Belajar Berhitung lahir dari kebutuhan di rumah sendiri: anaknya yang duduk di kelas 2 SD masih menghitung dengan jari, dan belum ada aplikasi berbahasa Indonesia yang mengajarkan strategi berpikirnya dengan sabar.</p>
+      <p lang="en">Zayamiyu was founded by Muhammad, a father in Indonesia. Belajar Berhitung grew out of a need at home: a second-grader in the family still counted on fingers, and no Indonesian-language app taught the underlying thinking strategies patiently.</p>
+      <p lang="id">Kami membangun pelan-pelan dan teliti: setiap pelajaran, petunjuk, dan cerita diuji dengan anak sungguhan dan dengan ribuan pemeriksaan otomatis sebelum dirilis.</p>
+      <p lang="en">We build slowly and carefully: every lesson, hint and story is tried with a real child and checked by thousands of automated tests before release.</p>
+    </div>
+    <img src="./img/bab-pesta.webp" alt="Ilustrasi Kancil membagi hasil panen dengan adil" width="900" height="600" loading="lazy" style="border-radius:24px;border:3px solid var(--ink);box-shadow:var(--panel)">
+  </div>
+</section>
+
+<section id="kontak" class="kontak">
+  <div class="wrap">
+    <div class="eyebrow"><span lang="id">Kontak</span><span lang="en">Contact</span></div>
+    <h2><span lang="id">Ada pertanyaan atau ingin mencoba bersama sekolah Anda?</span><span lang="en">Questions, or want to try it with your school?</span></h2>
+    <p><a class="surel" href="mailto:papa@zayamiyu.com">papa@zayamiyu.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/zayamiyu">@zayamiyu</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Zayamiyu</span>
+    <a href="./privasi.html"><span lang="id">Kebijakan privasi</span><span lang="en">Privacy policy</span></a>
+    <a href="https://belajar-berhitung-ten.vercel.app">Belajar Berhitung</a>
+    <span lang="id">Claude adalah merek dagang Anthropic.</span><span lang="en">Claude is a trademark of Anthropic.</span>
+  </div>
+</footer>
+
+<script>
+/* Pilihan bahasa diingat di perangkat pengunjung saja. Tidak ada pelacak di halaman ini. */
+(function () {
+  var root = document.documentElement;
+  function pasang(b) { root.setAttribute('data-bahasa', b); root.setAttribute('lang', b); }
+  try { var simpan = localStorage.getItem('zayamiyu-bahasa'); if (simpan === 'en' || simpan === 'id') pasang(simpan); } catch (e) {}
+  document.getElementById('bahasa').addEventListener('click', function () {
+    var b = root.getAttribute('data-bahasa') === 'id' ? 'en' : 'id';
+    pasang(b);
+    try { localStorage.setItem('zayamiyu-bahasa', b); } catch (e) {}
+  });
+})();
+</script>
+</body>
+</html>
