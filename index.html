@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#8FD9FF">
 <link rel="icon" href="./img/ikon-berhitung.png">
 <meta property="og:title" content="Zayamiyu — Belajar yang hangat untuk anak SD">
-<meta property="og:description" content="Produk pertama: Belajar Berhitung. Latihan berhitung dengan strategi, aman untuk anak, tanpa iklan.">
+<meta property="og:description" content="Produk pertama, masih tahap uji coba: Belajar Berhitung. Latihan berhitung dengan strategi, aman untuk anak, tanpa iklan.">
 <meta property="og:image" content="./img/bab-buaya.webp">
 <style>
 @font-face { font-family: 'Baloo 2'; src: url('./fonts/baloo2.woff2') format('woff2'); font-weight: 400 800; font-display: swap; }
@@ -84,7 +84,6 @@ html[data-bahasa="id"] [lang="en"], html[data-bahasa="en"] [lang="id"] { display
 .alur li::before { content: counter(langkah); position: absolute; left: 16px; top: 13px; width: 34px; height: 34px; border-radius: 50%; background: var(--yellow); border: 2px solid var(--ink); font-family: var(--head); font-weight: 800; display: flex; align-items: center; justify-content: center; }
 .label { display: inline-block; font-family: var(--head); font-weight: 800; font-size: 13px; letter-spacing: .4px; border-radius: 999px; padding: 2px 10px; border: 2px solid var(--ink); margin-bottom: 10px; }
 .label.tayang { background: #C8F2D6; }
-.label.dikembangkan { background: var(--orange-soft); }
 
 /* aman */
 .aman .kartu h3 { display: flex; gap: 10px; align-items: center; }
@@ -116,12 +115,12 @@ footer a { color: var(--muted); }
 <header class="hero">
   <div class="wrap">
     <div>
-      <div class="eyebrow"><span lang="id">Edtech untuk anak SD</span><span lang="en">Edtech for primary school children</span></div>
+      <div class="eyebrow"><span lang="id">Edtech untuk anak SD · tahap uji coba</span><span lang="en">Edtech for primary school children · early access</span></div>
       <h1><span lang="id">Belajar yang hangat, aman, dan masuk akal untuk anak SD.</span><span lang="en">Warm, safe, sensible learning for primary school children.</span></h1>
       <p class="lead" lang="id">Zayamiyu membuat aplikasi belajar untuk anak SD dan orang tuanya. Sederhana dipakai, tanpa iklan, dan dirancang supaya anak benar-benar paham, bukan sekadar hafal.</p>
       <p class="lead" lang="en">Zayamiyu builds learning apps for Indonesian primary school children and their parents. Simple to use, ad-free, and designed so children truly understand rather than merely memorise.</p>
       <div class="tombol-baris">
-        <a class="tombol" href="https://belajar-berhitung-ten.vercel.app"><span lang="id">Coba Belajar Berhitung</span><span lang="en">Try Belajar Berhitung</span></a>
+        <a class="tombol" href="https://belajar-berhitung-ten.vercel.app"><span lang="id">Coba versi uji coba</span><span lang="en">Try the early version</span></a>
         <a class="tombol putih" href="#claude"><span lang="id">Cara kami memakai Claude</span><span lang="en">How we use Claude</span></a>
       </div>
     </div>
@@ -137,7 +136,7 @@ footer a { color: var(--muted); }
       <img src="./img/ikon-berhitung.png" alt="" width="72" height="72">
       <div>
         <h2 style="margin:0">Belajar Berhitung</h2>
-        <p style="margin:0;color:var(--muted)"><span lang="id">Untuk anak kelas 1 sampai 3 SD</span><span lang="en">For children in grades 1 to 3</span></p>
+        <p style="margin:0;color:var(--muted)"><span lang="id">Untuk anak kelas 1 sampai 3 SD · masih dalam pengembangan</span><span lang="en">For children in grades 1 to 3 · still in development</span></p>
       </div>
     </div>
     <p class="lead" lang="id">Banyak anak SD masih berhitung dengan jari, satu per satu. Belajar Berhitung mengajarkan cara berpikir yang dipakai anak yang lancar berhitung: pasangan sepuluh, penjumlahan kembar, membuat sepuluh, keluarga bilangan, puluhan dan satuan, sampai perkalian dan pembagian. Semuanya dalam 34 pelajaran pendek yang dibungkus cerita perjalanan Kancil.</p>
@@ -167,9 +166,8 @@ footer a { color: var(--muted); }
     <p class="lead" lang="id">Kami memakai Claude dari Anthropic di tempat yang paling berguna dan paling aman: membantu orang tua memahami perkembangan anaknya. Anak tidak pernah mengetik apa pun ke AI, dan tidak pernah membaca teks buatan AI yang belum diperiksa.</p>
     <p class="lead" lang="en">We use Anthropic's Claude where it is most useful and safest: helping parents understand how their child is progressing. Children never type anything to an AI and never read unreviewed AI-generated text.</p>
 
-    <div class="grid2" style="margin-top:28px">
-      <div class="kartu">
-        <span class="label tayang"><span lang="id">Sudah tersedia</span><span lang="en">Live</span></span>
+    <div class="kartu" style="margin-top:28px">
+        <span class="label tayang"><span lang="id">Tahap uji coba</span><span lang="en">Early access</span></span>
         <h3><span lang="id">Laporan mingguan untuk orang tua</span><span lang="en">Weekly report for parents</span></h3>
         <p lang="id">Claude membaca ringkasan latihan tujuh hari terakhir, lalu menulis perkembangan anak dalam bahasa sehari-hari: kemajuannya, yang perlu diperhatikan, dan kegiatan singkat di rumah yang sejalan dengan pelajaran yang sedang ditempuh.</p>
         <p lang="en">Claude reads a summary of the past seven days of practice and writes up the child's progress in plain Indonesian: what improved, what needs attention, and short at-home activities that match the current lesson.</p>
@@ -183,21 +181,6 @@ footer a { color: var(--muted); }
           <li lang="id">Server memeriksa jawaban Claude: panjang, tanpa tautan, dan tanpa label diagnosis. Yang tidak lolos tidak ditampilkan.</li>
           <li lang="en">The server validates Claude's answer: length, no links, and no diagnostic labels. Anything that fails is never shown.</li>
         </ol>
-      </div>
-      <div>
-        <div class="kartu" style="margin-bottom:20px">
-          <span class="label dikembangkan"><span lang="id">Sedang dikembangkan</span><span lang="en">In development</span></span>
-          <h3><span lang="id">Petunjuk yang menyesuaikan kesalahan anak</span><span lang="en">Hints that adapt to the child's mistake</span></h3>
-          <p lang="id">Kode aplikasi mengenali jenis kesalahan, misalnya selisih satu atau tertukar tambah dan kurang. Claude membantu merangkai kalimat petunjuk yang sesuai. Petunjuk yang sudah teruji tetap menjadi cadangan.</p>
-          <p lang="en">The app recognises the type of mistake, such as off-by-one or a swapped operation, and Claude helps phrase a matching hint. Our tested hand-written hints remain the fallback.</p>
-        </div>
-        <div class="kartu">
-          <span class="label dikembangkan"><span lang="id">Sedang dikembangkan</span><span lang="en">In development</span></span>
-          <h3><span lang="id">Soal cerita dengan konteks Indonesia</span><span lang="en">Word problems in a local context</span></h3>
-          <p lang="id">Claude membantu menyusun soal cerita yang dekat dengan keseharian anak Indonesia. Setiap soal ditinjau guru SD dulu sebelum masuk ke aplikasi, jadi anak tidak pernah menerima teks AI mentah.</p>
-          <p lang="en">Claude helps draft word problems grounded in Indonesian children's everyday life. Every problem is reviewed by a primary school teacher before it enters the app, so children never receive raw AI text.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -228,11 +211,11 @@ footer a { color: var(--muted); }
   <div class="wrap grid2" style="align-items:center">
     <div>
       <div class="eyebrow"><span lang="id">Tentang Zayamiyu</span><span lang="en">About Zayamiyu</span></div>
-      <h2><span lang="id">Dimulai dari meja belajar di rumah.</span><span lang="en">It started at the study table at home.</span></h2>
-      <p lang="id">Zayamiyu didirikan oleh Muhammad, seorang ayah di Indonesia. Belajar Berhitung lahir dari kebutuhan di rumah sendiri: anaknya yang duduk di kelas 2 SD masih menghitung dengan jari, dan belum ada aplikasi berbahasa Indonesia yang mengajarkan strategi berpikirnya dengan sabar.</p>
-      <p lang="en">Zayamiyu was founded by Muhammad, a father in Indonesia. Belajar Berhitung grew out of a need at home: a second-grader in the family still counted on fingers, and no Indonesian-language app taught the underlying thinking strategies patiently.</p>
-      <p lang="id">Kami membangun pelan-pelan dan teliti: setiap pelajaran, petunjuk, dan cerita diuji dengan anak sungguhan dan dengan ribuan pemeriksaan otomatis sebelum dirilis.</p>
-      <p lang="en">We build slowly and carefully: every lesson, hint and story is tried with a real child and checked by thousands of automated tests before release.</p>
+      <h2><span lang="id">Dibangun pelan-pelan, bersama keluarga.</span><span lang="en">Built carefully, together with families.</span></h2>
+      <p lang="id">Zayamiyu adalah usaha kecil di Indonesia yang membuat aplikasi belajar untuk anak SD. Kami percaya anak belajar paling baik kalau ia paham caranya, merasa aman, dan tidak dikejar-kejar.</p>
+      <p lang="en">Zayamiyu is a small Indonesian company building learning apps for primary school children. We believe children learn best when they understand the method, feel safe, and are not rushed.</p>
+      <p lang="id">Belajar Berhitung masih dalam tahap uji coba. Setiap pelajaran, petunjuk, dan cerita dicoba bersama anak sungguhan dan diperiksa ribuan pemeriksaan otomatis sebelum dirilis.</p>
+      <p lang="en">Belajar Berhitung is still in early access. Every lesson, hint and story is tried with real children and checked by thousands of automated tests before release.</p>
     </div>
     <img src="./img/bab-pesta.webp" alt="Ilustrasi Kancil membagi hasil panen dengan adil" width="900" height="600" loading="lazy" style="border-radius:24px;border:3px solid var(--ink);box-shadow:var(--panel)">
   </div>
@@ -241,7 +224,7 @@ footer a { color: var(--muted); }
 <section id="kontak" class="kontak">
   <div class="wrap">
     <div class="eyebrow"><span lang="id">Kontak</span><span lang="en">Contact</span></div>
-    <h2><span lang="id">Ada pertanyaan atau ingin mencoba bersama sekolah Anda?</span><span lang="en">Questions, or want to try it with your school?</span></h2>
+    <h2><span lang="id">Ada pertanyaan, atau ingin ikut mencoba?</span><span lang="en">Questions, or want to join the early access?</span></h2>
     <p><a class="surel" href="mailto:papa@zayamiyu.com">papa@zayamiyu.com</a></p>
     <p>Instagram: <a href="https://instagram.com/zayamiyu">@zayamiyu</a></p>
   </div>
