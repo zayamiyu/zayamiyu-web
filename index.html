@@ -65,10 +65,6 @@ nav .isi { height: 72px; display: flex; align-items: center; gap: 28px; }
 .layar img { width: 100%; max-width: 280px; height: auto; border-radius: 34px; border: 8px solid #fff; box-shadow: 0 1px 2px rgba(31,42,68,.06), 0 24px 48px rgba(31,42,68,.14); }
 .layar figcaption { font-weight: 700; font-size: 15px; color: var(--teks); text-align: center; }
 
-/* Daftar produk */
-.produk { background: #fff; border: 1px solid rgba(31,42,68,.07); border-radius: 24px; padding: 20px; box-shadow: var(--kartu); display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--ink); }
-.produk:hover { color: var(--ink); box-shadow: 0 1px 2px rgba(31,42,68,.06), 0 14px 32px rgba(31,42,68,.09); }
-.produk img { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 16px; }
 
 footer .isi { padding-top: 28px; padding-bottom: 44px; display: flex; flex-wrap: wrap; gap: 10px 28px; align-items: center; font-size: 14px; color: var(--redup); }
 footer a { color: var(--redup); }
@@ -82,7 +78,6 @@ footer a { color: var(--redup); }
     <div class="tautan">
       <a href="#peduli"><span lang="id">Tentang kami</span><span lang="en">About us</span></a>
       <a href="#berhitung">Belajar Berhitung</a>
-      <a href="#produk"><span lang="id">Produk</span><span lang="en">Products</span></a>
       <a href="#kontak"><span lang="id">Kontak</span><span lang="en">Contact</span></a>
     </div>
     <button class="bahasa" id="bahasa" type="button" aria-label="Ganti bahasa / Switch language"><span lang="id">English</span><span lang="en">Indonesia</span></button>
@@ -202,33 +197,6 @@ footer a { color: var(--redup); }
   </div>
 </section>
 
-<section id="produk" style="padding-top:clamp(72px,9vw,128px)">
-  <div class="isi tumpuk" style="gap:24px">
-    <div class="tumpuk" style="gap:10px">
-      <div class="alis" style="color:var(--brand-teks)"><span lang="id">Produk Zayamiyu</span><span lang="en">Zayamiyu products</span></div>
-      <h2 style="font-size:clamp(28px,3vw,38px)"><span lang="id">Untuk anak-anak, dari Zayamiyu.</span><span lang="en">For children, from Zayamiyu.</span></h2>
-    </div>
-    <div class="kisi" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
-      <a class="produk" href="#berhitung">
-        <img src="./img/ikon-berhitung.png" alt="">
-        <span class="tumpuk" style="flex:1 1 auto;min-width:0">
-          <span style="font-family:var(--head);font-weight:800;font-size:20px">Belajar Berhitung</span>
-          <span style="color:var(--redup);font-size:15px"><span lang="id">Aplikasi latihan berhitung · versi beta</span><span lang="en">Counting practice app · beta</span></span>
-        </span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-      <a class="produk" href="https://instagram.com/zayamiyu">
-        <img src="./img/zayamiyu-logo.png" alt="" style="border-radius:50%">
-        <span class="tumpuk" style="flex:1 1 auto;min-width:0">
-          <span style="font-family:var(--head);font-weight:800;font-size:20px"><span lang="id">Pakaian anak</span><span lang="en">Children's clothing</span></span>
-          <span style="color:var(--redup);font-size:15px"><span lang="id">Koleksi pakaian anak, lihat di Instagram @zayamiyu</span><span lang="en">Our clothing collection, on Instagram @zayamiyu</span></span>
-        </span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
 <section id="kontak" class="panel-luar" style="padding-top:clamp(72px,9vw,128px);padding-bottom:clamp(48px,6vw,80px)">
   <div class="panel tumpuk" style="background:var(--ink);color:#fff;gap:16px;align-items:flex-start">
     <img src="./img/zayamiyu-wordmark-putih.png" alt="Zayamiyu" style="height:48px;width:auto;margin-bottom:8px">
@@ -236,7 +204,6 @@ footer a { color: var(--redup); }
     <p style="color:#DCE3F0;max-width:620px" lang="id">Punya pertanyaan, atau ingin ikut mencoba Belajar Berhitung bersama anak di rumah? Kami senang mendengar dari Anda.</p>
     <p style="color:#DCE3F0;max-width:620px" lang="en">Have a question, or want to try Belajar Berhitung with your child at home? We'd love to hear from you.</p>
     <a href="mailto:papa@zayamiyu.com" style="font-family:var(--head);font-weight:800;font-size:clamp(22px,2.4vw,30px);color:var(--kuning);text-decoration:none">papa@zayamiyu.com</a>
-    <p style="color:#DCE3F0">Instagram: <a href="https://instagram.com/zayamiyu" style="color:#fff;font-weight:700">@zayamiyu</a></p>
   </div>
 </section>
 </main>
@@ -247,7 +214,6 @@ footer a { color: var(--redup); }
     <span>© 2026 Zayamiyu</span>
     <a href="./privasi.html"><span lang="id">Kebijakan privasi</span><span lang="en">Privacy policy</span></a>
     <a href="https://berhitung.zayamiyu.com">Belajar Berhitung</a>
-    <a href="https://instagram.com/zayamiyu">Instagram</a>
   </div>
 </footer>
 
