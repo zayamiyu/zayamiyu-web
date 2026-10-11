@@ -10,6 +10,17 @@ klaim "tanpa pelacak" berlaku juga untuk website ini sendiri.
 - Tautan ke aplikasi memakai https://berhitung.zayamiyu.com (subdomain di Cloudflare,
   CNAME ke project Vercel belajar-berhitung, DNS only).
 
-**Isi website harus sama dengan isi formulir program dan dengan aplikasinya.** Fitur
-yang belum tayang ditandai "Sedang dikembangkan". Jangan ubah labelnya menjadi "Sudah
-tersedia" sebelum fiturnya benar-benar tayang.
+**Isi website harus sama dengan isi formulir program dan dengan aplikasinya.** Aplikasi
+disebut "versi beta", dan website hanya menyebut fitur yang sudah benar-benar tayang.
+Jangan menambahkan janji fitur yang belum ada.
+
+## Tempat tayang
+
+- Repo ini public dan di-deploy otomatis oleh Vercel (project `zayamiyu-web`) setiap ada
+  push ke `main`. Repo milik organisasi GitHub harus tetap public selama memakai paket
+  Vercel gratis (Hobby), karena paket itu tidak bisa men-deploy repo private milik
+  organisasi.
+- Domain: https://www.zayamiyu.com (https://zayamiyu.com diarahkan ke sana). DNS di
+  Cloudflare, CNAME ke Vercel, DNS only. Record MX dan TXT milik email iCloud jangan
+  diubah.
+- Jangan simpan apa pun yang rahasia di repo ini: semuanya bisa dibaca publik.

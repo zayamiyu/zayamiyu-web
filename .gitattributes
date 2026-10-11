@@ -1,0 +1,9 @@
+# Samakan akhir baris agar tidak ada peringatan CRLF/LF saat commit di Windows.
+* text=auto eol=lf
+
+# Berkas biner: jangan diutak-atik akhir barisnya.
+*.png  binary
+*.webp binary
+*.ico  binary
+*.woff2 binary
+*.jpg  binary
