@@ -7,8 +7,8 @@ klaim "tanpa pelacak" berlaku juga untuk website ini sendiri.
 - Dua bahasa dalam satu berkas: elemen `lang="id"` dan `lang="en"`, ditukar tombol di
   kanan atas. Pilihan bahasa disimpan di localStorage pengunjung.
 - Tangkapan layar di `img/` diambil dari aplikasi Belajar Berhitung yang asli.
-- Tautan ke aplikasi masih ke belajar-berhitung-ten.vercel.app. Ganti ke
-  berhitung.zayamiyu.com setelah subdomain itu terpasang.
+- Tautan ke aplikasi memakai https://berhitung.zayamiyu.com (subdomain di Cloudflare,
+  CNAME ke project Vercel belajar-berhitung, DNS only).
 
 **Isi website harus sama dengan isi formulir program dan dengan aplikasinya.** Fitur
 yang belum tayang ditandai "Sedang dikembangkan". Jangan ubah labelnya menjadi "Sudah
